@@ -14,4 +14,7 @@
 !.oh-my-zsh
 !.zshrc
 
+# I like tmux
+!.tmux.conf
+
 # etc...
