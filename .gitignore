@@ -8,7 +8,8 @@
 !.vim/
 !.vimrc
 # Ignore bundle though
-.vim/bundle
+.vim/bundle/*
+!.vim/bundle/vundle
 
 # I like zsh
 !.oh-my-zsh
