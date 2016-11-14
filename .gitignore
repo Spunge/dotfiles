@@ -10,6 +10,8 @@
 # Ignore bundle though
 .vim/bundle
 
+# I like zsh
+!.oh-my-zsh
 !.zshrc
 
 # etc...
