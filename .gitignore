@@ -1,7 +1,14 @@
 # Ignore everything
-*
+/*
 
-# But not these files...
+# Know what to add
 !.gitignore
+
+# I like vim
+!.vim/
+#!.vim/vimrc
+#!.vim/README.md
+!.vimrc
+.vim/bundle
 
 # etc...
