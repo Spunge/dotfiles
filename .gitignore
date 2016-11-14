@@ -6,9 +6,10 @@
 
 # I like vim
 !.vim/
-#!.vim/vimrc
-#!.vim/README.md
 !.vimrc
+# Ignore bundle though
 .vim/bundle
+
+!.zshrc
 
 # etc...
