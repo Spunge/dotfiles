@@ -7,8 +7,10 @@
 # I like vim
 !.vim/
 !.vimrc
-# Ignore bundle though
+!.selected_editor
+# Ignore bundles though
 .vim/bundle/*
+# But do install vundle
 !.vim/bundle/vundle
 
 # I like zsh
