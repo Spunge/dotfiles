@@ -40,6 +40,7 @@ alias ping="prettyping"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git)
 
+DISABLE_UPDATE_PROMPT=true
 source $ZSH/oh-my-zsh.sh
  
 # Customize to your needs...
