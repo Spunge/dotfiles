@@ -7,33 +7,34 @@ call vundle#rc()
 " NOTE: comments after Bundle command are not allowed..
 " let Vundle manage Vundle
 " required! 
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/vundle'
 
 " Github repos
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'kien/ctrlp.vim'
-Bundle 'xolox/vim-easytags'
-Bundle 'xolox/vim-misc'
-Bundle 'majutsushi/tagbar'
-Bundle 'scrooloose/syntastic'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'msanders/snipmate.vim'
-Bundle 'tpope/vim-markdown'
-Bundle 'mattn/emmet-vim'
-Bundle 'bling/vim-bufferline'
-Bundle 'bling/vim-airline'
-Bundle 'tpope/vim-surround'
-Bundle 'digitaltoad/vim-jade'
-Bundle 'chase/vim-ansible-yaml'
-Bundle 'moll/vim-node'
-Bundle 'cakebaker/scss-syntax.vim'
-Bundle 'Valloric/YouCompleteMe'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'kien/ctrlp.vim'
+Plugin 'xolox/vim-easytags'
+Plugin 'xolox/vim-misc'
+Plugin 'majutsushi/tagbar'
+Plugin 'scrooloose/syntastic'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'msanders/snipmate.vim'
+Plugin 'tpope/vim-markdown'
+Plugin 'mattn/emmet-vim'
+Plugin 'bling/vim-bufferline'
+Plugin 'bling/vim-airline'
+Plugin 'tpope/vim-surround'
+Plugin 'digitaltoad/vim-jade'
+Plugin 'chase/vim-ansible-yaml'
+Plugin 'moll/vim-node'
+Plugin 'cakebaker/scss-syntax.vim'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'tao12345666333/vim-vue'
 
 " vim-scripts repos
-Bundle 'AutoClose'
+Plugin 'AutoClose'
 
 " Non github repos
-" Bundle 'git://git.wincent.com/command-t.git'
+" Plugin 'git://git.wincent.com/command-t.git'
 " ...
 
 set statusline+=%#warningmsg#

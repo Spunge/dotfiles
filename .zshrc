@@ -14,8 +14,6 @@ NODE_ENV=development
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias htop="TERM=screen htop"
-alias dbm="sequelize db:migrate"
-alias ping="prettyping"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -38,9 +36,17 @@ alias ping="prettyping"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git)
+plugins=(git mercurial)
 
 DISABLE_UPDATE_PROMPT=true
+
+# Host specific config
+if [ $(hostname) != 'synapse' ]; then
+	DISABLE_AUTO_UPDATE=true
+else
+	alias ping="prettyping"
+fi
+
 source $ZSH/oh-my-zsh.sh
  
 # Customize to your needs...
