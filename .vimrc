@@ -128,8 +128,6 @@ map <C-y> :bp<CR>
 " clear search results
 vnoremap // y/<C-R>"<CR>"
 
-map <C-n> :NERDTreeToggle<CR>
-
 " Use space as ex command unit (:)
 map <Space> :
 
@@ -162,13 +160,13 @@ let g:tagbar_iconchars = ['▾', '▸']
 let g:ctrlp_tabpage_position = 'ac'
 
 " Ignore compiled python
-set wildignore+=*/tmp/*,*.pyc,*/bower_components/*,*/node_modules/*
+set wildignore+=*.pyc
 " dont look at .hg dirs to decide where current working dir is, messes up with
 " subrepos
 let g:ctrlp_working_path_mode = '0'
 
 " Ignore certain files
-let g:ctrlp_custom_ignore = '\v[\/]\.(node_modules|bower_components|git|hg|svn)$'
+let g:ctrlp_custom_ignore = '^node_modules\|bower_components\|git\|hg\|svn\|dist'
 
 " let easytags look for tags file in project
 set tags=./.tags;
