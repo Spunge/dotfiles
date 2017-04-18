@@ -166,7 +166,7 @@ set wildignore+=*.pyc
 let g:ctrlp_working_path_mode = '0'
 
 " Ignore certain files
-let g:ctrlp_custom_ignore = '^node_modules\|bower_components\|git\|hg\|svn\|dist'
+let g:ctrlp_custom_ignore = 'node_modules\|bower_components\|\.git\|\.hg\|\.svn\|dist'
 
 " let easytags look for tags file in project
 set tags=./.tags;
