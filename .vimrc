@@ -1,62 +1,66 @@
-set nocompatible               " be iMproved
-filetype off                   " required!
+set nocompatible              " be iMproved, required
+filetype off                  " required
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/vundle.vim
+call vundle#begin()
 
 " NOTE: comments after Bundle command are not allowed..
 " let Vundle manage Vundle
 " required! 
-Plugin 'gmarik/vundle'
+Plugin 'VundleVim/Vundle.vim'
 
 " Github repos
-Plugin 'altercation/vim-colors-solarized'
+"Plugin 'altercation/vim-colors-solarized'
+Plugin 'jsenin/molokai'
 Plugin 'kien/ctrlp.vim'
 Plugin 'xolox/vim-easytags'
 Plugin 'xolox/vim-misc'
 Plugin 'majutsushi/tagbar'
-Plugin 'scrooloose/syntastic'
+"Plugin 'scrooloose/syntastic'
 Plugin 'scrooloose/nerdcommenter'
-Plugin 'msanders/snipmate.vim'
+"Plugin 'msanders/snipmate.vim'
 Plugin 'tpope/vim-markdown'
-Plugin 'mattn/emmet-vim'
+"Plugin 'mattn/emmet-vim'
 Plugin 'bling/vim-bufferline'
 Plugin 'bling/vim-airline'
 Plugin 'tpope/vim-surround'
-Plugin 'digitaltoad/vim-jade'
+"Plugin 'digitaltoad/vim-jade'
 Plugin 'chase/vim-ansible-yaml'
 Plugin 'moll/vim-node'
-Plugin 'cakebaker/scss-syntax.vim'
+"Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'Valloric/YouCompleteMe'
-Plugin 'tao12345666333/vim-vue'
+"Plugin 'tao12345666333/vim-vue'
+Plugin 'leafgarland/typescript-vim'
+Plugin 'pangloss/vim-javascript'
 
 " vim-scripts repos
 Plugin 'AutoClose'
 
-" Non github repos
-" Plugin 'git://git.wincent.com/command-t.git'
-" ...
+call vundle#end()            " required
+filetype plugin indent on    " required
 
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
 
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_auto_jump = 0
-let g:syntastic_check_on_wq = 0
-let g:syntastic_javascript_checkers = ['eslint']
-
-filetype plugin indent on " required!
+"let g:syntastic_always_populate_loc_list = 1
+"let g:syntastic_auto_loc_list = 1
+"let g:syntastic_check_on_open = 1
+"let g:syntastic_auto_jump = 0
+"let g:syntastic_check_on_wq = 0
+"let g:syntastic_javascript_checkers = ['eslint']
 
 " Solarized settings
-set background=dark
-let g:solarized_termtrans=1
-let g:solarized_termcolors=256
-let g:solarized_contrast="high"
-let g:solarized_visibility="high"
-colo solarized 
+"set background=dark
+"let g:solarized_termtrans=1
+"let g:solarized_termcolors=256
+"let g:solarized_contrast="high"
+"let g:solarized_visibility="high"
+"colo solarized 
+" Molokai settings
+let g:molokai_original = 1
+let g:rehash256 = 1
+colo molokai
 
 let g:ansible_options = {'ignore_blank_lines': 0}
 let g:user_emmet_leader_key='<C-Z>'
@@ -65,9 +69,9 @@ set encoding=utf-8
 set cpoptions+=$
 set gcr=a:blinkon0
 set autoindent
-set tabstop=4
-set shiftwidth=4
-set noexpandtab
+set tabstop=2
+set shiftwidth=2
+set expandtab
 set nowrap
 
 " Temp text wrapping
@@ -89,7 +93,7 @@ set scrolloff=4	" keep 4 lines off the edges of the screen when scrolling
 set nobackup	" no backup file clutter
 set noswapfile	" never used it
 set nomodeline	" ignore vim modelines
-set laststatus=2 " always show statusline
+"set laststatus=2 " always show statusline
 
 " fix workman binding
 noremap l o
@@ -149,8 +153,7 @@ let g:snippets_dir = '~/code/dotfiles/vimsnippets/'
 let g:bufferline_echo = 0
 "let g:airline_left_sep = '▶'
 "let g:airline_right_sep = '◀'
-"let g:airline_theme='badwolf'
-let g:airline_powerline_fonts=1
+"let g:airline_theme='badwolf' let g:airline_powerline_fonts=1
 
 " tagbar autofocus and autoclose
 nmap <F8> :TagbarToggle<CR>

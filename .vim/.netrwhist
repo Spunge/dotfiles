@@ -1,11 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =9
-let g:netrw_dirhist_1='/home/johan/Desktop/test/dotfiles/.oh-my-zsh'
-let g:netrw_dirhist_2='/home/johan/Desktop/test/dotfiles'
-let g:netrw_dirhist_3='/etc/nginx/sites-available'
-let g:netrw_dirhist_4='/home/johan/Downloads/bouwekeep/webapps/bouwekeep/myproject'
-let g:netrw_dirhist_5='/etc/glusterfs'
-let g:netrw_dirhist_6='/home/johan/Projects/Code/wismon/test'
-let g:netrw_dirhist_7='/home/johan/Projects/Scripts/forest'
-let g:netrw_dirhist_8='/etc/haproxy'
-let g:netrw_dirhist_9='/home/johan/Projects/Scripts/forest/roles/common/templates/ssh'
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/home/johan/Projects/Code/forest/service/api/test/route/projects/environments/builds'
+let g:netrw_dirhist_2='/home/johan/Projects/Code/forest/service/api/lib/route/environments/backups'
+let g:netrw_dirhist_3='/home/johan/Desktop/backups'
+let g:netrw_dirhist_4='/etc/mysql/mariadb.conf.d'

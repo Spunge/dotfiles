@@ -8,7 +8,20 @@ ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="agnoster"
 DEFAULT_USER="johan"
 
-NODE_ENV=development
+#export NODE_ENV=development
+
+export CGO_CFLAGS="-I/home/johan/deps/sqlite/ -I/home/johan/deps/dqlite/include/"
+export CGO_LDFLAGS="-L/home/johan/deps/sqlite/.libs/ -L/home/johan/deps/dqlite/.libs/"
+export LD_LIBRARY_PATH="/home/johan/deps/sqlite/.libs/:/home/johan/deps/dqlite/.libs/"
+
+export MAKEFLAGS=-j8
+export GOPATH=$HOME/go
+export GOBIN=$GOPATH/bin
+
+export ETCDCTL_ENDPOINTS="https://127.0.0.1:2379"
+export ETCDCTL_CA_FILE="/home/johan/Projects/Code/forest/module/etcd3/test/certs/certs/ca.crt"
+export ETCDCTL_CERT_FILE="/home/johan/Projects/Code/forest/module/etcd3/test/certs/certs/etcd0.localhost.crt"
+export ETCDCTL_KEY_FILE="/home/johan/Projects/Code/forest/module/etcd3/test/certs/private/etcd0.localhost.key"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -16,7 +29,7 @@ NODE_ENV=development
 alias htop="TERM=screen htop"
 
 # Set to this to use case-sensitive completion
-# CASE_SENSITIVE="true"
+#CASE_SENSITIVE="true"
 
 # Comment this out to disable bi-weekly auto-update checks
 # DISABLE_AUTO_UPDATE="true"
@@ -41,7 +54,7 @@ plugins=(git mercurial)
 DISABLE_UPDATE_PROMPT=true
 
 # Host specific config
-if [ $(hostname) != 'synapse' ]; then
+if [ $(hostname) != 'helios' ]; then
 	DISABLE_AUTO_UPDATE=true
 else
 	alias ping="prettyping"
@@ -50,7 +63,7 @@ fi
 source $ZSH/oh-my-zsh.sh
  
 # Customize to your needs...
-export PATH=/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
+export PATH=/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
 
 # Fix TERM var to fix colors
 TERM=xterm-256color
